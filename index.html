@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Iterator Drill: Reduce</title>
-  <meta name="author" content="Flatiron School">
+  <title>Battery Count</title>
 </head>
 <body>
-  hello
-  <script type="text/javascript" src="index.js"></script>
+  <h1>Total Batteries Assembled:</h1>
+  <p id="battery-total"></p>
+
+  <script>
+    const batteryBatches = [4, 5, 3, 6, 5];
+
+    const totalBatteries = batteryBatches.reduce((total, batch) => total + batch, 0);
+
+    document.getElementById("battery-total").textContent = totalBatteries;
+  </script>
 </body>
 </html>
